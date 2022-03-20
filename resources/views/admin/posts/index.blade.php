@@ -11,6 +11,7 @@
                 <th scope="col">title</th>
                 <th scope="col">content</th>
                 <th scope="col">slug</th>
+                <th scope="col">category</th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +21,7 @@
                     <td>{{ $post->title }}</th>
                     <td>{{ $post->content }}</th>
                     <td>{{ $post->slug }}</th>
+                    <td>{{$post->category ? $post->category->name : 'No category'}}</td>
                     <td>
                         <a href="{{ route('admin.posts.show', $post->id) }}"><button type="button"
                                 class="btn btn-primary">vedi</button></a>
